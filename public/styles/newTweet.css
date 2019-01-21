@@ -1,0 +1,27 @@
+section.new-tweet{
+    margin: auto;
+    background-color:lightgrey;
+    padding: 0px 10px 10px 10px;
+}
+
+section.new-tweet h2{
+    font-size: 2em;
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+    height: fit-content:
+}
+
+section.new-tweet textarea{
+    padding: 5px;
+    width: 100%;
+}
+
+section.new-tweet input{
+    align-self: left;
+    margin-top: 5px;
+}
+
+section.new-tweet span{
+    padding-top: 5px;
+    float: right;
+}
