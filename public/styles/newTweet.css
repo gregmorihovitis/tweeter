@@ -1,12 +1,13 @@
 section.new-tweet{
-    margin: auto;
+    /* margin: auto; */
     background-color:lightgrey;
     padding: 0px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 section.new-tweet h2{
     font-size: 2em;
-    padding-top: 5px;
     border-bottom: 1px solid black;
     height: fit-content;
 }
@@ -22,6 +23,6 @@ section.new-tweet input{
 }
 
 section.new-tweet span{
-    padding-top: 5px;
+    padding-top: 10px;
     float: right;
 }
