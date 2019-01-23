@@ -65,8 +65,13 @@ function createTweetElement(tweet){
     return $tweet;
 }
 
-let $tweet = createTweetElement(tweetData[0]);
+function renderTweets(tweets){
+    tweets.forEach(currTweet => {
+        $('#tweetContainer').prepend(createTweetElement(currTweet));
+    });
+}
 
-console.log($tweet);
 
-$('#tweetContainer').append($tweet);
+$(document).ready(function(){
+    renderTweets(tweetData);
+})

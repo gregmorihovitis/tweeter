@@ -1,4 +1,4 @@
-#tweetContainer article {
+#tweetContainer .tweet {
     /* position: relative; */
     margin-top: 15px;
     border: 1px solid grey;
