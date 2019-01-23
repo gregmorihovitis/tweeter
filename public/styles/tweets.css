@@ -3,19 +3,32 @@ section.tweetContainer article {
     margin-top: 15px;
     border: 1px solid grey;
     border-radius: 10px;
-    height: 150px;
     text-indent: 10px;
+    /* opacity: .5; */
+}
+
+section.tweetContainer .tweetText{
+    margin: 0px;
+    padding: 1em;
+    text-indent: 0px;
 }
 
 section.tweetContainer footer{
-    position: absolute;
+    position: relative;
     padding: 4px 0px;
     left: 0px;
-    bottom: 0px;
+    top: 0px;
     width: 100%;
     border-top: 1px groove lightgray;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+section.tweetContainer footer .dateCreated{
+    /* position: relative; */
+    margin: 0px;
+    /* left: 0px; */
+    /* bottom: 0px; */
 }
 
 section.tweetContainer header .username{
@@ -26,24 +39,24 @@ section.tweetContainer header .username{
 section.tweetContainer header .profilePic{
     padding-top: 5px;
     border-radius: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+section.tweetContainer header .handle{
+   display: inline-block;
+   position: absolute;
+   right: 0px;
+   padding-right: 5px;
 }
 
 section.tweetContainer header{
-    position: absolute;
+    position: relative;
     width: 100%;
     border-bottom: 1px groove darkgrey;
     background-color: whitesmoke;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    /* padding-top: 5px; */
-    top: 0;
-    
+    top: 0;  
 }
 
-
-/* section.tweetContainer p{
-    top: 0px;
-    margin-top: 5px;
-    padding: 10px;
-    text-indent: 0px;
-} */
