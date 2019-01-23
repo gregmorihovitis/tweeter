@@ -11,6 +11,7 @@
     margin: 0px;
     padding: 1em;
     text-indent: 0px;
+    word-wrap: break-word;
 }
 
 #tweetContainer footer{
