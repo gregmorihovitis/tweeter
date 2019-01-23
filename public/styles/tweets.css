@@ -1,0 +1,49 @@
+section.tweetContainer article {
+    position: relative;
+    margin-top: 15px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    height: 150px;
+    text-indent: 10px;
+}
+
+section.tweetContainer footer{
+    position: absolute;
+    padding: 4px 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px groove lightgray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+section.tweetContainer header .username{
+    display: inline-block;
+    vertical-align: top;   
+}
+
+section.tweetContainer header .profilePic{
+    padding-top: 5px;
+    border-radius: 10px;
+}
+
+section.tweetContainer header{
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px groove darkgrey;
+    background-color: whitesmoke;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    /* padding-top: 5px; */
+    top: 0;
+    
+}
+
+
+/* section.tweetContainer p{
+    top: 0px;
+    margin-top: 5px;
+    padding: 10px;
+    text-indent: 0px;
+} */

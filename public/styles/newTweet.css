@@ -7,9 +7,10 @@ section.new-tweet{
 }
 
 section.new-tweet h2{
-    font-size: 2em;
+    font-size: 25px;
     border-bottom: 1px solid black;
     height: fit-content;
+    margin-top: 5px;
 }
 
 section.new-tweet textarea{
