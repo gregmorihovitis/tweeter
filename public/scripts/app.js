@@ -66,9 +66,16 @@ function createTweetElement(tweet){
 }
 
 function renderTweets(tweets){
+  if($('.tweet').val() === undefined){
+    $('#tweetContainer').empty();
     tweets.forEach(currTweet => {
-        $('#tweetContainer').prepend(createTweetElement(currTweet));
-    });
+          $('#tweetContainer').prepend(createTweetElement(currTweet));
+      });
+  }else{
+    let lastTweet = tweets[tweets.length - 1];
+    
+    $('#tweetContainer').prepend(createTweetElement(lastTweet));
+  }
 }
 
 const submitTweet = () => {
@@ -99,6 +106,5 @@ const loadTweets  = () => {
 
 $(document).ready(function(){
     loadTweets();
-    // renderTweets(loadTweets);
     submitTweet();
 })

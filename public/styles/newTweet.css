@@ -16,6 +16,7 @@ section.new-tweet h2{
 section.new-tweet textarea{
     padding: 5px;
     width: 100%;
+    resize: none;
 }
 
 section.new-tweet input{
