@@ -1,19 +1,19 @@
-section.tweetContainer article {
-    position: relative;
+#tweetContainer article {
+    /* position: relative; */
     margin-top: 15px;
     border: 1px solid grey;
     border-radius: 10px;
     text-indent: 10px;
-    /* opacity: .5; */
+    opacity: .75;
 }
 
-section.tweetContainer .tweetText{
+#tweetContainer .tweetText{
     margin: 0px;
     padding: 1em;
     text-indent: 0px;
 }
 
-section.tweetContainer footer{
+#tweetContainer footer{
     position: relative;
     padding: 4px 0px;
     left: 0px;
@@ -22,35 +22,37 @@ section.tweetContainer footer{
     border-top: 1px groove lightgray;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    text-indent: 0px;
 }
 
-section.tweetContainer footer .dateCreated{
-    /* position: relative; */
-    margin: 0px;
-    /* left: 0px; */
-    /* bottom: 0px; */
-}
-
-section.tweetContainer header .username{
+#tweetContainer footer .dateCreated{
     display: inline-block;
-    vertical-align: top;   
+    position: relative;
+    padding-top: 5px;
+    margin: 0px;
+    left: 5px;
+    bottom: 5px;
 }
 
-section.tweetContainer header .profilePic{
+#tweetContainer header .username{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;       
+}
+
+#tweetContainer header .profilePic{
     padding-top: 5px;
     border-radius: 10px;
     height: 45px;
-    width: 45px;
+    width: 40px;
 }
 
-section.tweetContainer header .handle{
-   display: inline-block;
-   position: absolute;
-   right: 0px;
+#tweetContainer header .handle{
    padding-right: 5px;
+   float: right;
 }
 
-section.tweetContainer header{
+#tweetContainer header{
     position: relative;
     width: 100%;
     border-bottom: 1px groove darkgrey;
@@ -58,5 +60,20 @@ section.tweetContainer header{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     top: 0;  
+}
+
+#tweetContainer footer .icon{
+    margin-right: 5px;
+    float: right;
+    height: 20px;
+    width: 20px;
+    opacity: 0;
+}
+#tweetContainer article:hover{
+    opacity: 1;
+}
+
+#tweetContainer article:hover footer .icon{
+    opacity: 1;
 }
 
