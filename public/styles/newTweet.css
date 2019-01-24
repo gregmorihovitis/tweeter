@@ -29,3 +29,11 @@ section.new-tweet span{
     padding-top: 10px;
     float: right;
 }
+
+section.new-tweet #error{
+    color: red;
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 2px;
+    margin: 0px;
+}

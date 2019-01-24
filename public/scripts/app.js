@@ -85,22 +85,23 @@ const submitTweet = () => {
     let textIn = +$('.counter')['0'].textContent;
     
     if(textIn === 140){
-      alert('Please enter text.');
+      $('#error').text('Please enter a tweet.').slideDown('fast');
     } 
     else if(textIn < 0){
-      alert('Your message exceeds the character limit.');
+      $('#error').text('Tweet exceeds character limit.').slideDown('fast');
     } 
     else{
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: $(this).serialize()
-    })
-      .done(function(msg){
-        loadTweets();
-        $('textArea').val('');
-        $('.counter').text(140);
-      });
+      $('#error').hide();
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: $(this).serialize()
+      })
+        .done(function(msg){
+          loadTweets();
+          $('textArea').val('');
+          $('.counter').text(140);
+        });
     }
   });
 }
@@ -126,9 +127,11 @@ function escape(str) {
 $(document).ready(function(){
     loadTweets();
     submitTweet();
+    $('#error').hide();
+
     $('#compose').on('click', function(){
       console.log('strike 4');
       $('.new-tweet').slideToggle('fast');
       $('textarea').focus();
     });
-  })
+})

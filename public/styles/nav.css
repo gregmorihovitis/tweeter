@@ -46,3 +46,7 @@ nav{
     height: 22px;
     width: 22px;
 }
+
+#nav-bar button:hover{
+    background-color: chartreuse;
+}
