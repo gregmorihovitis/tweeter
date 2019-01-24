@@ -121,7 +121,14 @@ function escape(str) {
   return div.innerHTML;
 }
 
+
+
 $(document).ready(function(){
     loadTweets();
     submitTweet();
-})
+    $('#compose').on('click', function(){
+      console.log('strike 4');
+      $('.new-tweet').slideToggle('fast');
+      $('textarea').focus();
+    });
+  })
