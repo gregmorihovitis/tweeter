@@ -57,11 +57,11 @@ function createTweetElement(tweet){
     let $tweet = `
         <article class = 'tweet'>
             <header><img class = 'profilePic' src = "${tweet.user.avatars.small}"><p class = 'username'>${tweet.user.name}</p><p class = 'handle'>${tweet.user.handle}</p></header>
-            <p class = 'tweetText'>${tweet.content.text}</p>
+            <p class = 'tweetText'>${escape(tweet.content.text)}</p>
             <footer> <p class = 'dateCreated'>${myDate.toUTCString()}</p><img class = 'icon' src = '/images/flag.png'><img class = 'icon' src = '/images/repeat.png'><img class = 'icon' src = '/images/heart.png'></footer>
         </article>
     `
-    
+
     return $tweet;
 }
 
@@ -79,8 +79,18 @@ function renderTweets(tweets){
 }
 
 const submitTweet = () => {
-  $('form').on('submit', function(event){
+    $('form').on('submit', function(event){
     event.preventDefault();
+
+    let textIn = +$('.counter')['0'].textContent;
+    
+    if(textIn === 140){
+      alert('Please enter text.');
+    } 
+    else if(textIn < 0){
+      alert('Your message exceeds the character limit.');
+    } 
+    else{
     $.ajax({
       method: 'POST',
       url: '/tweets',
@@ -91,6 +101,7 @@ const submitTweet = () => {
         $('textArea').val('');
         $('.counter').text(140);
       });
+    }
   });
 }
 
@@ -102,6 +113,12 @@ const loadTweets  = () => {
     .done(function(data){
       renderTweets(data);
     });
+}
+
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
 $(document).ready(function(){
