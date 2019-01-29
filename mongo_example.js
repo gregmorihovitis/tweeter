@@ -3,6 +3,7 @@
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
+//connect to mongodb
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
     console.error(`Failed to connect: ${MONGODB_URI}`);
@@ -12,8 +13,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // We have a connection to the "tweeter" db, starting here.
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
-  // ==> Refactored and wrapped as new, tweet-specific function:
-
+  //call to gather all tweets
   function getTweets(callback) {
     db.collection("tweets").find().toArray(callback);
   }
